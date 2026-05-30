@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FileDown, ExternalLink } from "lucide-react";
-import heroImage from "../assets/heros/midautumn.jpeg";
+import heroImage from "../assets/heros/midautumn.jpg";
 
 export default function Home() {
   return (
