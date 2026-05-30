@@ -12,7 +12,8 @@ export default function Home() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      <p> yo whats up</p>
+      <div style={{ height: "100px" }}></div>
+      <p>interns page will go here</p>
     </motion.div>
   );
 }
