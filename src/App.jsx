@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 // Vercel Analytics
@@ -28,7 +28,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 
 // Assets
-import chasalogo from "./assets/chasalogo.png";
+import chasalogo from "./assets/logos/chasalogo.png";
 
 // Color palette?
 //  #FFFFFF
@@ -57,6 +57,78 @@ function AnimatedRoutes() {
   );
 }
 
+function NavbarWrapper() {
+  const [showNav, setShowNav] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    if (!isHome) {
+      setShowNav(true);
+      return;
+    }
+
+    const contentDiv = document.getElementById("content");
+
+    const handleScroll = () => {
+      setShowNav(contentDiv.scrollTop > 500); // scrollTop not scrollY
+    };
+
+    setShowNav(false);
+    contentDiv.addEventListener("scroll", handleScroll); // listen on the div not window
+    return () => contentDiv.removeEventListener("scroll", handleScroll);
+  }, [location]);
+
+  return (
+    <div
+      className={"flex-side"}
+      id={"navbar"}
+      style={{
+        position: "fixed",
+        transition: "opacity 0.3s ease, transform 0.3s ease",
+        opacity: showNav ? 0.9 : 0,
+        transform: showNav ? "translateY(0)" : "translateY(-100%)",
+        pointerEvents: showNav ? "auto" : "none",
+        padding: "15px",
+        paddingLeft: "40px",
+        paddingRight: "40px",
+        justifyContent: "space-between",
+        alignContent: "center",
+        gap: "0px",
+        width: '100%',
+        boxSizing: 'border-box',
+      }}
+    >
+      <NavLink to="/">
+        <img src={chasalogo} height={"35px"} />
+      </NavLink>
+      <div className={"flex-side"} style={{ gap: "5px" }}>
+        <NavLink className="nav-link" to="/">
+          Home
+        </NavLink>
+        <NavLink className="nav-link" to="/about">
+          About
+        </NavLink>
+        <NavLink className="nav-link" to="/contacts">
+          Contacts
+        </NavLink>
+        <NavLink className="nav-link" to="/events">
+          Events
+        </NavLink>
+        <NavLink className="nav-link" to="/fams">
+          Fams
+        </NavLink>
+        <NavLink className="nav-link" to="/history">
+          History
+        </NavLink>
+        <NavLink className="nav-link" to="/interns">
+          Interns
+        </NavLink>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <>
@@ -74,45 +146,7 @@ function App() {
             }}
           >
             {/* Navbar */}
-            <div
-              className={"flex-side"}
-              id={"navbar"}
-              style={{
-                padding: "15px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-                justifyContent: "space-between",
-                alignContent: "center",
-                gap: "0px",
-              }}
-            >
-              <NavLink to="/">
-                <img src={chasalogo} height={"35px"} />
-              </NavLink>
-              <div className={"flex-side"} style={{ gap: "5px" }}>
-                <NavLink className="nav-link" to="/">
-                  Home
-                </NavLink>
-                <NavLink className="nav-link" to="/about">
-                  About
-                </NavLink>
-                <NavLink className="nav-link" to="/contacts">
-                  Contacts
-                </NavLink>
-                <NavLink className="nav-link" to="/events">
-                  Events
-                </NavLink>
-                <NavLink className="nav-link" to="/fams">
-                  Fams
-                </NavLink>
-                <NavLink className="nav-link" to="/history">
-                  History
-                </NavLink>
-                <NavLink className="nav-link" to="/interns">
-                  Interns
-                </NavLink>
-              </div>
-            </div>
+            <NavbarWrapper/>
 
             {/* Displays designated pages */}
             <div style={{ backgroundColor: "#c9ada1" }}>
@@ -121,10 +155,14 @@ function App() {
               <p style={{ width: "40%", margin: "0 auto" }}>
                 Built using React, JavaScript and CSS. Hosted on Vercel. Full
                 website code can be found on GitHub here{" "}
-                <a href="https://github.com/TT6577/CHASA-UWMadison" target="_blank">
+                <a
+                  href="https://github.com/TT6577/CHASA-UWMadison"
+                  target="_blank"
+                >
                   here.
                 </a>
               </p>
+              <div style={{ height: "50px" }}></div>
             </div>
           </div>
         </BrowserRouter>

@@ -32,7 +32,7 @@ a {
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: none; /* explicitly no shadow by default */
-  transition: box-shadow 0.4s ease, background-color 0.4s ease, color 0.2s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -57,4 +57,13 @@ a {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+#content::-webkit-scrollbar {
+  display: none;
+}
+
+#content {
+  -ms-overflow-style: none;  /* IE */
+  scrollbar-width: none;     /* Firefox */
 }
