@@ -100,7 +100,7 @@ function NavbarWrapper() {
       }}
     >
       <NavLink to="/">
-        <img src={chasalogo} height={"35px"} />
+        <img src={chasalogo} style={{height: "35px"}} />
       </NavLink>
       <div className={"flex-side"} style={{ gap: "5px" }}>
         <NavLink className="nav-link" to="/">
