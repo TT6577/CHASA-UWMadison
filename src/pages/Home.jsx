@@ -13,41 +13,37 @@ export default function Home() {
       transition={{ duration: 0.3 }}
     >
       <div
+        className={"hero-image hero-content"}
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "900px",
           maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
           WebkitMaskImage:
             "linear-gradient(to bottom, black 70%, transparent 100%)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
-          padding: "100px 130px 0 80px", // top padding pushes content down from the top
           boxSizing: "border-box",
         }}
       >
         <h1
+          className={"hero-text-big"}
           style={{
             margin: "0 -5px 10px 0",
-            fontSize: "130px",
             lineHeight: 1,
             alignSelf: "flex-end",
-            letterSpacing: "7px",
           }}
         >
           CHASA
         </h1>
-        <h2 style={{ margin: "0", textAlign: "right" }}>
+        <h2 className={"hero-text"} style={{ margin: "0", textAlign: "right" }}>
           Chinese American representation <br /> @ UW-Madison
         </h2>
         <h2
+          className={"hero-text"}
           style={{
             margin: "0",
             textAlign: "right",
-            fontSize: "20px",
             marginTop: "30px",
             display: "flex",
             alignItems: "center",
@@ -71,10 +67,12 @@ export default function Home() {
         </h2>
       </div>
       <div style={{ height: "50px" }} />
-      <h1>Welcome to the Chinese American Student Association!</h1>
+      <h1 className={"content-text-big"}>
+        Welcome to the Chinese American Student Association!
+      </h1>
       <div
-        className={"card hoverable"}
-        style={{ margin: "3rem", backgroundColor: "#FFFFFF", padding: "2rem" }}
+        className={"card hoverable card-center"}
+        style={{ backgroundColor: "#FFFFFF" }}
       >
         <p>
           Hello, welcome to the Chinese American Student Association (CHASA) @
@@ -82,7 +80,7 @@ export default function Home() {
           awareness and understanding of Chinese American culture as well as
           provide a space for people to socialize and make friends on campus.
         </p>
-        <br/>
+        <br />
         <p>
           We host a variety of events, which are composed of general body
           meetings (GBMs, free events for everybody to join), Fam event (events

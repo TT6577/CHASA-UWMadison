@@ -15,17 +15,13 @@ export default function Home() {
       <div style={{ height: "100px" }}></div>
       <h1>Trying to find us?</h1>
       <div
-        className={"card hoverable flex-down"}
+        className={"card hoverable card-center"}
         style={{
-          margin: "3rem",
           backgroundColor: "#FFFFFF",
-          padding: "2rem",
-          paddingLeft: "200px",
-          paddingRight: "200px",
           justifyContent: "space-between",
         }}
       >
-        <div style={{alignItems: "center",}}>
+        <div style={{ alignItems: "center" }}>
           <h2
             style={{
               fontSize: "40px",
@@ -44,7 +40,15 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div style={{alignItems: "center",}}>
+      </div>
+      <div
+        className={"card hoverable card-center"}
+        style={{
+          backgroundColor: "#FFFFFF",
+          justifyContent: "space-between",
+        }}
+      >
+        <div style={{ alignItems: "center" }}>
           <h2
             style={{
               fontSize: "40px",

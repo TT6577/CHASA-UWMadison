@@ -37,8 +37,8 @@ a {
   color: #363636;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.4rem 1rem;
-  border-radius: 15px;
+  padding: 0.2rem 0.8rem;
+  border-radius: 12px;
   background-color: #FFFFFF;
   box-shadow: none; /* explicitly no shadow by default */
   transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -81,10 +81,10 @@ a {
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0px 0px 8px -3px #121212;
-  margin: auto;
+  margin: 2rem;
   padding: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
   transition: box-shadow 0.2s ease;
   position: relative;
@@ -99,4 +99,131 @@ a {
 
 li {
   color: #363636;
+}
+
+
+
+.hero-image {
+  height: 300px;
+  background-position: center;
+}
+
+.hero-content {
+  padding: 50px 20px 0 200px;
+}
+
+.hero-text-big {
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+.hero-text {
+  font-size: 12px;
+}
+
+.content-text-big {
+  line-height: 30px;
+}
+
+.card-center {
+  margin: 0.5rem;
+  padding: 1rem;
+}
+
+/* mobile — show hamburger, hide desktop links */
+.navbar-hamburger {
+  display: block;
+}
+
+.navbar-desktop {
+  display: none;
+}
+
+.navbar-mobile {
+  display: flex;
+}
+
+/* tablet and up */
+@media (min-width: 768px) {
+  .hero-image {
+    height: 700px;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 80px 100px 0 80px;
+  }
+
+  .hero-text-big {
+    font-size: 100px;
+    letter-spacing: 5px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+
+  .content-text-big {
+    line-height: 10px;
+  }
+
+  .card-center {
+    margin: 2rem;
+    padding: 3rem;
+  }
+
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .navbar-desktop {
+    display: flex;
+  }
+
+  .navbar-mobile {
+    display: none !important;  /* hide even if menuOpen is true */
+  }
+
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .hero-image {
+    height: 900px;
+    background-position: center 100%;
+  }
+
+  .hero-content {
+    padding: 80px 130px 0 80px;
+  }
+
+  .hero-text-big {
+    font-size: 130px;
+    letter-spacing: 9px;
+  }
+
+  .hero-text {
+    font-size: 30px;
+  }
+
+  .content-text-big {
+    line-height: 10px;
+  }
+
+  .card-center {
+    margin: 3rem;
+    padding: 5rem;
+  }
+
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .navbar-desktop {
+    display: flex;
+  }
+
+  .navbar-mobile {
+    display: none !important;  /* hide even if menuOpen is true */
+  }
 }

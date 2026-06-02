@@ -21,6 +21,8 @@ import Fams from "./pages/Fams.jsx";
 import History from "./pages/History.jsx";
 import Interns from "./pages/Interns.jsx";
 
+import { SquareMenu, SquareX } from "lucide-react";
+
 // Motion
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -59,10 +61,12 @@ function AnimatedRoutes() {
 
 function NavbarWrapper() {
   const [showNav, setShowNav] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
 
   useEffect(() => {
+    setMenuOpen(false);
     if (!isHome) {
       setShowNav(true);
       return;
@@ -71,7 +75,9 @@ function NavbarWrapper() {
     const contentDiv = document.getElementById("content");
 
     const handleScroll = () => {
-      setShowNav(contentDiv.scrollTop > 500); // scrollTop not scrollY
+      const hero = document.querySelector(".hero-image");
+      const threshold = hero ? hero.offsetHeight * 0.6 : 400; // 80% of hero height
+      setShowNav(contentDiv.scrollTop > threshold);
     };
 
     setShowNav(false);
@@ -81,50 +87,128 @@ function NavbarWrapper() {
 
   return (
     <div
-      className={"flex-side"}
-      id={"navbar"}
+      id="navbar"
       style={{
         position: "fixed",
         transition: "opacity 0.3s ease, transform 0.3s ease",
-        opacity: showNav ? 0.9 : 0,
+        opacity: showNav ? 0.95 : 0,
         transform: showNav ? "translateY(0)" : "translateY(-100%)",
         pointerEvents: showNav ? "auto" : "none",
-        padding: "15px",
-        paddingLeft: "40px",
-        paddingRight: "40px",
-        justifyContent: "space-between",
-        alignContent: "center",
-        gap: "0px",
-        width: '100%',
-        boxSizing: 'border-box',
+        width: "100%",
+        boxSizing: "border-box",
+        zIndex: 100,
       }}
     >
-      <NavLink to="/">
-        <img src={chasalogo} style={{height: "35px"}} />
-      </NavLink>
-      <div className={"flex-side"} style={{ gap: "5px" }}>
-        <NavLink className="nav-link" to="/">
-          Home
+      {/* Top bar — always visible */}
+      <div
+        className="flex-side"
+        style={{
+          padding: "15px 20px 15px 40px",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <NavLink to="/">
+          <img src={chasalogo} style={{ height: "30px" }} />
         </NavLink>
-        <NavLink className="nav-link" to="/about">
-          About
-        </NavLink>
-        <NavLink className="nav-link" to="/contacts">
-          Contacts
-        </NavLink>
-        <NavLink className="nav-link" to="/events">
-          Events
-        </NavLink>
-        <NavLink className="nav-link" to="/fams">
-          Fams
-        </NavLink>
-        <NavLink className="nav-link" to="/history">
-          History
-        </NavLink>
-        <NavLink className="nav-link" to="/interns">
-          Interns
-        </NavLink>
+
+        {/* Desktop links — hidden on mobile */}
+        <div className="navbar-desktop flex-side" style={{ gap: "3px" }}>
+          <NavLink className="nav-link" to="/">
+            Home
+          </NavLink>
+          <NavLink className="nav-link" to="/about">
+            About
+          </NavLink>
+          <NavLink className="nav-link" to="/contacts">
+            Contacts
+          </NavLink>
+          <NavLink className="nav-link" to="/events">
+            Events
+          </NavLink>
+          <NavLink className="nav-link" to="/fams">
+            Fams
+          </NavLink>
+          <NavLink className="nav-link" to="/history">
+            History
+          </NavLink>
+          <NavLink className="nav-link" to="/interns">
+            Interns
+          </NavLink>
+        </div>
+
+        {/* Hamburger button — only on mobile */}
+        <button
+          className="navbar-hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          style={{
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            fontSize: "24px",
+          }}
+        >
+          {menuOpen ? <SquareX/> : <SquareMenu />}
+        </button>
       </div>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <div
+          className="navbar-mobile flex-down"
+          style={{ padding: "10px 100px 100px", gap: "8px" }}
+        >
+          <NavLink
+            className="nav-link"
+            to="/"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to="/about"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to="/contacts"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contacts
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to="/events"
+            onClick={() => setMenuOpen(false)}
+          >
+            Events
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to="/fams"
+            onClick={() => setMenuOpen(false)}
+          >
+            Fams
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to="/history"
+            onClick={() => setMenuOpen(false)}
+          >
+            History
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            to="/interns"
+            onClick={() => setMenuOpen(false)}
+          >
+            Interns
+          </NavLink>
+        </div>
+      )}
     </div>
   );
 }
@@ -146,15 +230,15 @@ function App() {
             }}
           >
             {/* Navbar */}
-            <NavbarWrapper/>
+            <NavbarWrapper />
 
             {/* Displays designated pages */}
             <div style={{ backgroundColor: "#c9ada1" }}>
               <AnimatedRoutes />
               <div style={{ height: "180px" }}></div>
-              <p style={{ width: "40%", margin: "0 auto" }}>
+              <p style={{ width: "60%", margin: "0 auto" }}>
                 Built using React, JavaScript and CSS. Hosted on Vercel. Full
-                website code can be found on GitHub here{" "}
+                website code{" "}
                 <a
                   href="https://github.com/TT6577/CHASA-UWMadison"
                   target="_blank"
