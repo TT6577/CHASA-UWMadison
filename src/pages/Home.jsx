@@ -104,6 +104,7 @@ export default function Home() {
           fundraisers, and volunteer opportunities.
         </p>
       </div>
+      <h1></h1>
       <div style={{ height: "200px" }} />
     </motion.div>
   );
