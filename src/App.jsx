@@ -31,6 +31,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 
 // Assets
 import chasalogo from "./assets/logos/chasalogo.png";
+import bgPattern from "./assets/backgrounds/clouds-background.jpg";
 
 // Color palette?
 //  #FFFFFF
@@ -109,7 +110,18 @@ function NavbarWrapper() {
         }}
       >
         <NavLink to="/">
-          <img src={chasalogo} style={{ height: "30px" }} />
+          <motion.img
+            src={chasalogo}
+            style={{ height: "30px" }}
+            whileHover={{
+              rotate: [0, -10, 10, -5, 5, 0],
+              transition: { duration: 0.5 },
+            }}
+            whileTap={{
+              rotate: [0, -5, 5, -2, 2, 0],
+              transition: { duration: 0.5 },
+            }}
+          />
         </NavLink>
 
         {/* Desktop links — hidden on mobile */}
@@ -148,7 +160,7 @@ function NavbarWrapper() {
             fontSize: "24px",
           }}
         >
-          {menuOpen ? <SquareX/> : <SquareMenu />}
+          {menuOpen ? <SquareX /> : <SquareMenu />}
         </button>
       </div>
 
@@ -233,20 +245,37 @@ function App() {
             <NavbarWrapper />
 
             {/* Displays designated pages */}
-            <div style={{ backgroundColor: "#c9ada1" }}>
-              <AnimatedRoutes />
-              <div style={{ height: "180px" }}></div>
-              <p style={{ width: "60%", margin: "0 auto" }}>
-                Built using React, JavaScript and CSS. Hosted on Vercel. Full
-                website code{" "}
-                <a
-                  href="https://github.com/TT6577/CHASA-UWMadison"
-                  target="_blank"
-                >
-                  here.
-                </a>
-              </p>
-              <div style={{ height: "50px" }}></div>
+            <div style={{ backgroundColor: "#c9ada1", position: "relative" }}>
+              {/* pattern layer with opacity */}
+              <div
+                style={{
+                  position: "fixed",
+                  inset: 0,
+                  backgroundImage: `url(${bgPattern})`,
+                  backgroundRepeat: "repeat",
+                  backgroundSize: "626px 626px",
+                  backgroundBlendMode: "color-burn",
+                  opacity: 0.05, // adjust to taste
+                  pointerEvents: "none",
+                  zIndex: 0,
+                }}
+              />
+              {/* content layer */}
+              <div style={{ position: "relative", zIndex: 1, minHeight: "100vh" }}>
+                <AnimatedRoutes />
+                <div style={{ height: "180px" }}></div>
+                <p style={{ width: "60%", margin: "0 auto" }}>
+                  Built using React, JavaScript and CSS. Hosted on Vercel. Full
+                  website code{" "}
+                  <a
+                    href="https://github.com/TT6577/CHASA-UWMadison"
+                    target="_blank"
+                  >
+                    here.
+                  </a>
+                </p>
+                <div style={{ height: "50px" }}></div>
+              </div>
             </div>
           </div>
         </BrowserRouter>

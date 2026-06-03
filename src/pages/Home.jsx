@@ -26,17 +26,32 @@ export default function Home() {
           boxSizing: "border-box",
         }}
       >
-        <h1
-          className={"hero-text-big"}
+        <motion.h1
+          className={"hero-text-big select-none"}
           style={{
             margin: "0 -5px 10px 0",
             lineHeight: 1,
             alignSelf: "flex-end",
           }}
+          whileHover={{
+            rotate: [0, -3, 3, -1, 1, 0],
+            transition: { duration: 0.5 },
+          }}
+          whileTap={{
+            rotate: [0, -5, 5, -2, 2, 0],
+            transition: { duration: 0.5 },
+          }}
         >
           CHASA
-        </h1>
-        <h2 className={"hero-text"} style={{ margin: "0", textAlign: "right" }}>
+        </motion.h1>
+        <h2
+          className={"hero-text"}
+          style={{
+            margin: "0",
+            textAlign: "right",
+            transformOrigin: "right center",
+          }}
+        >
           Chinese American representation <br /> @ UW-Madison
         </h2>
         <h2
