@@ -140,7 +140,7 @@ li {
 
 
 .hero-image {
-  height: 300px;
+  height: 350px;
   background-position: center;
 }
 
@@ -149,16 +149,19 @@ li {
 }
 
 .hero-text-big {
-  font-size: 50px;
+  font-size: 55px;
   letter-spacing: 3px;
   color: #fff;
 }
 
 .hero-text {
-  font-size: 12px;
+  font-size: 14px;
+  padding-bottom: 25px;
 }
 
 .content-text-big {
+  margin: 1rem;
+  font-size: 23px;
   line-height: 30px;
 }
 
@@ -213,9 +216,11 @@ li {
   .hero-text {
     font-size: 20px;
     color: #fff;
+    padding-bottom: 0px;
   }
 
   .content-text-big {
+    font-size: 50px;
     line-height: 50px;
     color: #fff;
   }
@@ -266,9 +271,11 @@ li {
   .hero-text {
     font-size: 30px;
     color: #fff;
+    padding-bottom: 0px;
   }
 
   .content-text-big {
+    font-size: 50px;
     line-height: 50px;
     color: #fff;
   }
