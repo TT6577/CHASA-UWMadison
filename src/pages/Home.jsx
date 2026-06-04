@@ -189,7 +189,6 @@ export default function Home() {
 
       <Card
         center
-        className="navbar-desktop"
         style={{ gap: "20px", padding: '2.5rem' }}
       >
         <h1 style={{color: "#743c2a"}}>Check out our other pages!</h1>
