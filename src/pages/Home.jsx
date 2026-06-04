@@ -1,8 +1,41 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronsDown } from "lucide-react";
+import { ChevronsDown, CalendarDays, MapPin } from "lucide-react";
 import heroImage from "../assets/heros/midautumn.jpg";
+import chasalogo from "../assets/logos/chasalogo.png";
+import Card from "../components/Card.jsx";
+
+const announcements = [
+  {
+    id: 0,
+    title: "CHASA Logo Design Competition",
+    date: "August 28, 2026",
+    location: "N/A",
+    body: "Our logo is in need of an update. We want YOU to help us create a new one! See our post for more info!",
+  },
+  {
+    id: 1,
+    title: "Welcome Back Fall 2026!",
+    date: "September 1, 2026",
+    location: "Mosse Humanities",
+    body: "GBM #1 is happening this Friday at 7pm. Come meet the new exec board!",
+  },
+  {
+    id: 2,
+    title: "Mid-Autumn Festival",
+    date: "September 15, 2026",
+    location: "Memorial Union",
+    body: "Join us for our annual Mid-Autumn Festival celebration. Food, games, and lanterns!",
+  },
+  {
+    id: 3,
+    title: "Lunar New Year",
+    date: "2027 TBD",
+    location: "Union South",
+    body: "Our biggest event of the year! Celebrate the Year of the Goat, complete with free Chinese cuisine and cultural performances!",
+  },
+];
 
 export default function Home() {
   return (
@@ -81,14 +114,14 @@ export default function Home() {
           </span>
         </h2>
       </div>
+
       <div style={{ height: "50px" }} />
+
       <h1 className={"content-text-big"}>
         Welcome to the Chinese American Student Association!
       </h1>
-      <div
-        className={"card hoverable card-center"}
-        style={{ backgroundColor: "#FFFFFF" }}
-      >
+      <Card hoverable center style={{paddingTop: "30px"}}>
+        <img src={chasalogo} style={{height: 'auto', width: '30%', alignSelf: 'center'}}/>
         <p>
           Hello, welcome to the Chinese American Student Association (CHASA) @
           UW-Madison! We are a UW-Madison affiliated club that aims to improve
@@ -103,8 +136,39 @@ export default function Home() {
           here), as well as other events like collab events with other clubs,
           fundraisers, and volunteer opportunities.
         </p>
+      </Card>
+      <div
+        className="green-background-div"
+        style={{ backgroundColor: "#7f8671" }}
+      >
+        <h1>Announcements</h1>
+        <div className='card-grid'>
+          {announcements.length > 0 ? (
+            announcements.map((a) => (
+              <Card
+                key={a.id}
+                hoverable
+                className="borderhover"
+                style={{ textAlign: "left", margin: "1rem", gap: "5px", flex: '1'}}
+              >
+                <h2 style={{ color: "#743c2a" }}>{a.title}</h2>
+                <div className='flex-side' style={{gap: '5px', alignItems: 'center'}}>
+                  <CalendarDays size='20px'/>
+                  <p style={{ fontSize: "15px", color: "#7f8671" }}>{a.date}</p>
+                  <MapPin size='20px'/>
+                  <p style={{ fontSize: "15px", color: "#7f8671" }}>
+                    {a.location}
+                  </p>
+                </div>
+                <p>{a.body}</p>
+              </Card>
+            ))
+          ) : (
+            <p>No announcements right now — check back soon!</p>
+          )}
+        </div>
       </div>
-      <h1></h1>
+
       <div style={{ height: "200px" }} />
     </motion.div>
   );

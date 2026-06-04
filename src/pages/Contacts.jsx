@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FileDown, ExternalLink } from "lucide-react";
 import instaqr from "../assets/qrcodes/chasamadison_qr.jpg";
 import groupmeqr from "../assets/qrcodes/groupmeqr.jpg";
+import Card from "../components/Card.jsx";
 
 export default function Home() {
   return (
@@ -41,8 +42,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      <div
-        className={"card hoverable card-center"}
+      <Card hoverable center
         style={{
           backgroundColor: "#FFFFFF",
           justifyContent: "space-between",
@@ -95,7 +95,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </div>
+      </Card>
     </motion.div>
   );
 }

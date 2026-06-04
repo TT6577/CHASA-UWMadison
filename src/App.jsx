@@ -261,21 +261,31 @@ function App() {
                 }}
               />
               {/* content layer */}
-              <div style={{ position: "relative", zIndex: 1, minHeight: "100vh" }}>
+              <div
+                style={{ position: "relative", zIndex: 1, minHeight: "100vh" }}
+              >
                 <AnimatedRoutes />
-                <div style={{ height: "180px" }}></div>
-                <p style={{ width: "60%", margin: "0 auto" }}>
-                  Built using React, JavaScript and CSS. Hosted on Vercel. Full
-                  website code{" "}
-                  <a
-                    href="https://github.com/TT6577/CHASA-UWMadison"
-                    target="_blank"
-                  >
-                    here.
-                  </a>
-                </p>
-                <div style={{ height: "50px" }}></div>
               </div>
+            </div>
+
+            <div style={{ height: "150px" }}></div>
+            <div id="footer">
+              <div style={{ height: "30px" }}></div>
+              <p
+                className="footer-text"
+                style={{ width: "60%", margin: "0 auto" }}
+              >
+                Built using React, JavaScript and CSS. Hosted on Vercel. Full
+                website code{" "}
+                <a
+                  className="bright-link"
+                  href="https://github.com/TT6577/CHASA-UWMadison"
+                  target="_blank"
+                >
+                  here.
+                </a>
+              </p>
+              <div style={{ height: "50px" }}></div>
             </div>
           </div>
         </BrowserRouter>
