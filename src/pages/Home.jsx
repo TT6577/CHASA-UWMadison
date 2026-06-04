@@ -192,7 +192,7 @@ export default function Home() {
         style={{ gap: "20px", padding: '2.5rem' }}
       >
         <h1 style={{color: "#743c2a"}}>Check out our other pages!</h1>
-        <div className="flex-side" style={{alignSelf: 'center', flexWrap: 'wrap'}}>
+        <div className="flex-side " style={{alignSelf: 'center', flexWrap: 'wrap'}}>
           <NavLink className="nav-link nav-link-large" to="/about">
             About
           </NavLink>
