@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+  NavLink,
+} from "react-router-dom";
 import { ChevronsDown, CalendarDays, MapPin } from "lucide-react";
 import heroImage from "../assets/heros/midautumn.jpg";
 import chasalogo from "../assets/logos/chasalogo.png";
@@ -120,8 +127,11 @@ export default function Home() {
       <h1 className={"content-text-big"}>
         Welcome to the Chinese American Student Association!
       </h1>
-      <Card hoverable center style={{paddingTop: "30px"}}>
-        <img src={chasalogo} style={{height: 'auto', width: '30%', alignSelf: 'center'}}/>
+      <Card hoverable center style={{ paddingTop: "30px" }}>
+        <img
+          src={chasalogo}
+          style={{ height: "auto", width: "30%", alignSelf: "center" }}
+        />
         <p>
           Hello, welcome to the Chinese American Student Association (CHASA) @
           UW-Madison! We are a UW-Madison affiliated club that aims to improve
@@ -142,20 +152,28 @@ export default function Home() {
         style={{ backgroundColor: "#7f8671" }}
       >
         <h1>Announcements</h1>
-        <div className='card-grid'>
+        <div className="card-grid">
           {announcements.length > 0 ? (
             announcements.map((a) => (
               <Card
                 key={a.id}
                 hoverable
                 className="borderhover"
-                style={{ textAlign: "left", margin: "1rem", gap: "5px", flex: '1'}}
+                style={{
+                  textAlign: "left",
+                  margin: "1rem",
+                  gap: "5px",
+                  flex: "1",
+                }}
               >
                 <h2 style={{ color: "#743c2a" }}>{a.title}</h2>
-                <div className='flex-side' style={{gap: '5px', alignItems: 'center'}}>
-                  <CalendarDays size='20px'/>
+                <div
+                  className="flex-side"
+                  style={{ gap: "5px", alignItems: "center" }}
+                >
+                  <CalendarDays size="20px" />
                   <p style={{ fontSize: "15px", color: "#7f8671" }}>{a.date}</p>
-                  <MapPin size='20px'/>
+                  <MapPin size="20px" />
                   <p style={{ fontSize: "15px", color: "#7f8671" }}>
                     {a.location}
                   </p>
@@ -169,7 +187,35 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{ height: "200px" }} />
+      <Card
+        center
+        className="navbar-desktop"
+        style={{ gap: "20px", padding: '2.5rem' }}
+      >
+        <h1 style={{color: "#743c2a"}}>Check out our other pages!</h1>
+        <div className="flex-side" style={{alignSelf: 'center', flexWrap: 'wrap'}}>
+          <NavLink className="nav-link nav-link-large" to="/about">
+            About
+          </NavLink>
+          <NavLink className="nav-link nav-link-large" to="/contacts">
+            Contacts
+          </NavLink>
+          <NavLink className="nav-link nav-link-large" to="/events">
+            Events
+          </NavLink>
+          <NavLink className="nav-link nav-link-large" to="/fams">
+            Fams
+          </NavLink>
+          <NavLink className="nav-link nav-link-large" to="/history">
+            History
+          </NavLink>
+          <NavLink className="nav-link nav-link-large" to="/interns">
+            Interns
+          </NavLink>
+        </div>
+      </Card>
+
+      <div style={{ height: "50px" }} />
     </motion.div>
   );
 }

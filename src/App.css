@@ -56,6 +56,11 @@ a {
   background-color: #7f8671;
 }
 
+.nav-link-large {
+  font-size: 30px;
+  padding: 0.5rem 1.5rem;
+}
+
 .flex-side {
   display: flex;
   flex-direction: row;
@@ -117,6 +122,21 @@ li {
 .bright-link {
   color: #c9ada1;
 }
+
+.btn-group button {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+  border: 5px solid green;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none;
+}
+
+
+
+
 
 
 .hero-image {
