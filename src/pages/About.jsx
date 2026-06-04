@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  FileDown, ExternalLink,
-} from "lucide-react";
+import { FileDown, ExternalLink } from "lucide-react";
 
 export default function About() {
   return (
@@ -13,7 +11,9 @@ export default function About() {
       transition={{ duration: 0.3 }}
     >
       <div style={{ height: "100px" }}></div>
-      <p>about page will go here</p>
+      <div className="green-background-div">
+        <h1>About CHASA</h1>
+      </div>
     </motion.div>
   );
 }

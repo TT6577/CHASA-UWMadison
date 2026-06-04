@@ -268,7 +268,7 @@ function App() {
               </div>
             </div>
 
-            <div style={{ height: "150px" }}></div>
+            <div style={{ height: "50px" }}></div>
             <div id="footer">
               <div style={{ height: "30px" }}></div>
               <p

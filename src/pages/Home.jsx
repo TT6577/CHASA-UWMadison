@@ -18,7 +18,7 @@ const announcements = [
     id: 0,
     title: "CHASA Logo Design Competition",
     date: "August 28, 2026",
-    location: "N/A",
+    location: "N/A - Online",
     body: "Our logo is in need of an update. We want YOU to help us create a new one! See our post for more info!",
   },
   {

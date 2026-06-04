@@ -15,10 +15,9 @@ export default function Home() {
     >
       <div style={{ height: "100px" }}></div>
       <h1>Trying to find us?</h1>
-      <div
-        className={"card hoverable card-center"}
+      <Card
+        center
         style={{
-          backgroundColor: "#FFFFFF",
           justifyContent: "space-between",
         }}
       >
@@ -41,59 +40,63 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </div>
-      <Card hoverable center
-        style={{
-          backgroundColor: "#FFFFFF",
-          justifyContent: "space-between",
-        }}
-      >
-        <div style={{ alignItems: "center" }}>
-          <h2
+      </Card>
+      <Card center style={{ backgroundColor: "#FFFFFF" }}>
+        <h2 style={{ fontSize: "40px", color: "#363636" }}>Socials</h2>
+
+        <div className='card-grid'
+          style={{
+            gap: "2rem",
+          }}
+        >
+          {/* Instagram */}
+          <div
             style={{
-              fontSize: "40px",
-              color: "#363636",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "1rem",
             }}
           >
-            Socials
-          </h2>
-          <ul>
-            <li>
-              Instagram:{" "}
-              <a
-                href={
-                  "https://www.instagram.com/chasamadison?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                }
-                target={"_blank"}
-              >
-                chasamadison
-              </a>
-              <img
-                src={instaqr}
-                style={{
-                  width: "300px",
-                  height: "300px",
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-              />
-            </li>
-            <li>
-              GroupMe:{" "}
-              <a href={"https://groupme.com/join_group/106007294/OPtpknel"}>
-                https://groupme.com/join_group/106007294/OPtpknel
-              </a>
-              <img
-                src={groupmeqr}
-                style={{
-                  width: "300px",
-                  height: "300px",
-                  objectFit: "cover",
-                  objectPosition: "center",
-                }}
-              />
-            </li>
-          </ul>
+            <h3 style={{ margin: 0 }}>Instagram</h3>
+            <img
+              src={instaqr}
+              style={{
+                width: "300px",
+                height: "300px",
+                objectFit: "cover",
+              }}
+            />
+            <a href="https://www.instagram.com/chasamadison" target="_blank">
+              @chasamadison
+            </a>
+          </div>
+
+          {/* GroupMe */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "1rem",
+            }}
+          >
+            <h3 style={{ margin: 0 }}>GroupMe</h3>
+            <img
+              src={groupmeqr}
+              style={{
+                width: "300px",
+                height: "300px",
+                objectFit: "cover",
+              }}
+            />
+            <a
+              href="https://groupme.com/join_group/106007294/OPtpknel"
+              target="_blank"
+            >
+              Join GroupMe
+            </a>
+          </div>
         </div>
       </Card>
     </motion.div>
