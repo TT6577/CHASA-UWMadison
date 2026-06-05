@@ -46,6 +46,7 @@ import bgPattern from "./assets/backgrounds/clouds-background.jpg";
 //  #7f8671
 //  #363636
 
+// Display pages using route
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -64,6 +65,7 @@ function AnimatedRoutes() {
   );
 }
 
+// Creates navbar functionality for hiding navbar on home
 function NavbarWrapper() {
   const [showNav, setShowNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -81,7 +83,7 @@ function NavbarWrapper() {
 
     const handleScroll = () => {
       const hero = document.querySelector(".hero-image");
-      const threshold = hero ? hero.offsetHeight * 0.6 : 400; // 80% of hero height
+      const threshold = hero ? hero.offsetHeight * 0.6 : 400; // change this to decide when to show navbar
       setShowNav(contentDiv.scrollTop > threshold);
     };
 
@@ -229,13 +231,70 @@ function NavbarWrapper() {
   );
 }
 
+// Footer
+function Footer() {
+  return (
+    <div id="footer">
+      <div style={{ height: "30px" }}></div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div
+          className="flex-side"
+          style={{ marginLeft: "3rem", alignItems: "center" }}
+        >
+          <a
+            className="footer-text"
+            href="mailto:chasauwmadison@gmail.com"
+            target="_blank"
+          >
+            <IoMail size="55px" />
+          </a>
+          <a
+            className="footer-text"
+            href="https://www.instagram.com/chasamadison"
+            target="_blank"
+          >
+            <AiFillInstagram size="50px" />
+          </a>
+          <a
+            className="footer-text"
+            href="https://groupme.com/join_group/106007294/OPtpknel"
+            target="_blank"
+          >
+            <SiGroupme size="40px" />
+          </a>
+        </div>
+
+        <p className="footer-text" style={{ width: "60%" }}>
+          Built using React, JavaScript and CSS. Hosted on Vercel. Full website
+          code{" "}
+          <a
+            className="bright-link"
+            href="https://github.com/TT6577/CHASA-UWMadison"
+            target="_blank"
+          >
+            here.
+          </a>
+        </p>
+      </div>
+
+      <div style={{ height: "50px" }}></div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <>
-      <Analytics />
+      <Analytics /> {/* For vercel analytics to see usage rates  */}
       <div style={{ height: "100vh", overflow: "hidden" }}>
         <BrowserRouter>
-          <ScrollToTop />
+          <ScrollToTop /> {/* Scroll to top when changing pages */}
           <div
             id="content"
             style={{
@@ -245,26 +304,26 @@ function App() {
               position: "relative",
             }}
           >
-            {/* Navbar */}
+            {/* Navbar/Header */}
             <NavbarWrapper />
 
             {/* Displays designated pages */}
             <div style={{ backgroundColor: "#c9ada1", position: "relative" }}>
-              {/* pattern layer with opacity */}
+              {/* Pattern layer with opacity */}
               <div
                 style={{
                   position: "fixed",
                   inset: 0,
-                  backgroundImage: `url(${bgPattern})`,
+                  backgroundImage: `url(${bgPattern})` /* Change this to change the background  */,
                   backgroundRepeat: "repeat",
                   backgroundSize: "626px 626px",
                   backgroundBlendMode: "color-burn",
-                  opacity: 0.05, // adjust to taste
+                  opacity: 0.05,
                   pointerEvents: "none",
                   zIndex: 0,
                 }}
               />
-              {/* content layer */}
+              {/* Content layer */}
               <div
                 style={{ position: "relative", zIndex: 1, minHeight: "100vh" }}
               >
@@ -273,51 +332,9 @@ function App() {
             </div>
 
             <div style={{ height: "50px" }}></div>
-            <div id="footer">
-              <div style={{ height: "30px" }}></div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: 'center' }}>
-                <div
-                  className="flex-side"
-                  style={{ marginLeft: "3rem", alignItems: "center" }}
-                >
-                  <a
-                    className="footer-text"
-                    href="mailto:chasauwmadison@gmail.com"
-                    target="_blank"
-                  >
-                    <IoMail size="55px" />
-                  </a>
-                  <a
-                    className="footer-text"
-                    href="https://www.instagram.com/chasamadison"
-                    target="_blank"
-                  >
-                    <AiFillInstagram size="50px" />
-                  </a>
-                  <a
-                    className="footer-text"
-                    href="https://groupme.com/join_group/106007294/OPtpknel"
-                    target="_blank"
-                  >
-                    <SiGroupme size="40px" />
-                  </a>
-                </div>
 
-                <p className="footer-text" style={{ width: "60%" }}>
-                  Built using React, JavaScript and CSS. Hosted on Vercel. Full
-                  website code{" "}
-                  <a
-                    className="bright-link"
-                    href="https://github.com/TT6577/CHASA-UWMadison"
-                    target="_blank"
-                  >
-                    here.
-                  </a>
-                </p>
-              </div>
-
-              <div style={{ height: "50px" }}></div>
-            </div>
+            {/* Footer  */}
+            <Footer/>
           </div>
         </BrowserRouter>
       </div>

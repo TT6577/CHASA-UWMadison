@@ -13,6 +13,7 @@ import heroImage from "../assets/heros/midautumn.jpg";
 import chasalogo from "../assets/logos/chasalogo.png";
 import Card from "../components/Card.jsx";
 
+// Edit announcements here - still looking into making it easier for PR/secretary chair to edit announcements
 const announcements = [
   {
     id: 0,
@@ -52,6 +53,7 @@ export default function Home() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
+      {/* Hero image code */}
       <div
         className={"hero-image hero-content"}
         style={{

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-#root {
+#root { /* Required bc by default root has margins which make the website look bad */
   margin: 0;
   padding: 0;
   width: 100%;
@@ -40,7 +40,7 @@ a {
   padding: 0.2rem 0.8rem;
   border-radius: 12px;
   background-color: #FFFFFF;
-  box-shadow: none; /* explicitly no shadow by default */
+  box-shadow: none;
   transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -141,6 +141,7 @@ li {
   border-right: none;
 }
 
+/* Same styling as the navbar buttons, but creating a different class for less confusion */
 .dl-button {
   color: #363636;
   text-decoration: none;
@@ -162,7 +163,9 @@ li {
 
 
 
+/* All mobile/tablet/pc formatting/styling differences are settled here */
 
+/* ---------- FOR MOBILE ------------------- */
 .hero-image {
   height: 350px;
   background-position: center;
@@ -224,7 +227,7 @@ li {
   gap: 0rem;
 }
 
-/* tablet and up */
+/* ---------- FOR TABLET ------------------- */
 @media (min-width: 768px) {
   .hero-image {
     height: 700px;
@@ -283,7 +286,8 @@ li {
   }
 }
 
-/* desktop */
+
+/* ---------- FOR PC ------------------- */
 @media (min-width: 1024px) {
   .hero-image {
     height: 900px;
