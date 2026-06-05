@@ -109,6 +109,13 @@ li {
   color: #363636;
 }
 
+.footer-text li {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 #footer {
   position: relative;
   background-color: #436043;
