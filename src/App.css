@@ -141,6 +141,23 @@ li {
   border-right: none;
 }
 
+.dl-button {
+  color: #363636;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  box-shadow: none; /* explicitly no shadow by default */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.dl-button:hover {
+  color: #FFFFFF;
+  box-shadow: inset 0px 4px 2px #363636;
+  background-color: #7f8671;
+}
+
 
 
 
@@ -175,6 +192,10 @@ li {
 .card-center {
   margin: 0.5rem;
   padding: 1rem;
+}
+
+.text-center {
+  margin: 0 0.5rem 0 0.5rem;
 }
 
 /* mobile — show hamburger, hide desktop links */
@@ -237,6 +258,10 @@ li {
     padding: 3rem;
   }
 
+  .text-center {
+    margin: 0 3rem 0 3rem;
+  }
+
   .navbar-hamburger {
     display: none;
   }
@@ -290,6 +315,10 @@ li {
   .card-center {
     margin: 3rem;
     padding: 5rem;
+  }
+
+  .text-center {
+    margin: 0 5rem 0 5rem;
   }
 
   .navbar-hamburger {
