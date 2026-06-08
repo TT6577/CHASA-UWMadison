@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FileDown, ExternalLink } from "lucide-react";
 import instaqr from "../assets/qrcodes/chasamadison_qr.jpg";
 import groupmeqr from "../assets/qrcodes/groupmeqr.jpg";
+import chasavenmo from "../assets/qrcodes/chasavenmo.jpg";
 import Card from "../components/Card.jsx";
 
 export default function Home() {
@@ -44,7 +45,8 @@ export default function Home() {
       <Card center style={{ backgroundColor: "#FFFFFF" }}>
         <h2 style={{ fontSize: "40px", color: "#363636" }}>Socials</h2>
 
-        <div className='card-grid'
+        <div
+          className="card-grid"
           style={{
             gap: "2rem",
           }}
@@ -97,6 +99,46 @@ export default function Home() {
               Join GroupMe
             </a>
           </div>
+        </div>
+      </Card>
+
+      <Card center style={{ justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: '20px',
+          }}
+        >
+          <h2 style={{ fontSize: "40px", color: "#363636" }}>Venmo</h2>
+          <img
+            src={chasavenmo}
+            style={{
+              width: "300px",
+              height: "300px",
+              objectFit: "cover",
+            }}
+          />
+          <p className="text-center" style={{ marginTop: "1rem" }}>
+            This is the CHASA Venmo for dues. In order to run our club, we need
+            funds, and membership dues are a huge part of why we can run fun
+            events. Becoming a member is required to join a fam and eat at our
+            food events for free. However, dues are not required to join our
+            monthly GBMs or our big annual celebrations.
+          </p>
+          <div className="flex-side">
+            <p className="text-center">
+              Semester Dues: $10
+            </p>
+            <p className="text-center">
+              Yearly Dues: $16
+            </p>
+          </div>
+
+          <p className="text-center">
+            Thank you for supporting us!
+          </p>
         </div>
       </Card>
     </motion.div>

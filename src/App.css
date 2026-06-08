@@ -227,6 +227,15 @@ li {
   gap: 0rem;
 }
 
+.carousel-image {
+  height: 350px;
+  background-position: center;
+}
+
+.carousel-center {
+  padding: 1rem;
+}
+
 /* ---------- FOR TABLET ------------------- */
 @media (min-width: 768px) {
   .hero-image {
@@ -283,6 +292,15 @@ li {
 
   .card-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel-image {
+    height: 400px;
+    background-position: center;
+  }
+
+  .carousel-center {
+    padding: 3rem;
   }
 }
 
@@ -343,5 +361,14 @@ li {
 
   .card-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel-image {
+    height: 650px;
+    background-position: center;
+  }
+
+  .carousel-center {
+    padding: 2rem 8rem 2rem 8rem;
   }
 }
