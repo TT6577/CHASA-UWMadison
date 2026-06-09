@@ -6,18 +6,22 @@ import Carousel from "../components/Carousel.jsx";
 
 // LNY photos
 import lnyphoto from "../assets/events/lny/boarddancestill.jpg";
-import lionphoto from "../assets/events/lny/lions.PNG";
-import generalphoto from "../assets/events/lny/generalvibelny.JPG";
-import foodphoto from "../assets/events/lny/foodline.JPG";
-import rafflephoto from "../assets/events/lny/TVwinner.JPG";
+import lionphoto from "../assets/events/lny/lions.jpg";
+import generalphoto from "../assets/events/lny/generalvibelny.jpg";
+import foodphoto from "../assets/events/lny/foodline.jpg";
+import rafflephoto from "../assets/events/lny/TVwinner.jpg";
 
 // Mid-autumn photos
-import musicalchairsphoto from "../assets/events/midautumn/musicalchairs.JPG";
-import culturalphoto from "../assets/events/midautumn/culturalsegment.JPG";
-import generalvibephoto from "../assets/events/midautumn/generalvibemid.JPG";
-import mooncakesphoto from "../assets/events/midautumn/mooncakes.JPG";
-import heartpairsphoto from "../assets/events/midautumn/heartpairs.JPG";
-import tablerphoto from "../assets/events/midautumn/tablerhasa.JPG";
+import musicalchairsphoto from "../assets/events/midautumn/musicalchairs.jpg";
+import culturalphoto from "../assets/events/midautumn/culturalsegment.jpg";
+import generalvibephoto from "../assets/events/midautumn/generalvibemid.jpg";
+import mooncakesphoto from "../assets/events/midautumn/mooncakes.jpg";
+import heartpairsphoto from "../assets/events/midautumn/heartpairs.jpg";
+import tablerphoto from "../assets/events/midautumn/tablerhasa.jpg";
+
+// Backgrounds
+import lnybackground from "../assets/backgrounds/lnybackground.jpg";
+import midbackground from "../assets/backgrounds/midbackground.jpg";
 
 const lnyphotos = [
   { src: lnyphoto, caption: "E-board Dance Performance 10/10" },
@@ -74,13 +78,27 @@ export default function Home() {
         <h1 style={{ color: "#000" }}>Event Gallery</h1>
       </Card>
       <div style={{ height: "10px" }} />
-      <div className="carousel-center" style={{ backgroundColor: "#FFF" }}>
-        <h2 style={{color: '#000'}}>Lunar New Year</h2>
+      <div
+        className="carousel-center"
+        style={{
+          backgroundImage: `url(${lnybackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: 'center',
+        }}
+      >
+        <h2 style={{ color: "#FFF" }}>Lunar New Year</h2>
         <Carousel photos={lnyphotos} />
       </div>
       <div style={{ height: "20px" }} />
-      <div className="carousel-center" style={{ backgroundColor: "#FFF" }}>
-        <h2 style={{color: '#000'}}>Mid-Autumn Festival</h2>
+      <div
+        className="carousel-center"
+        style={{
+          backgroundImage: `url(${midbackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: 'center',
+        }}
+      >
+        <h2 style={{ color: "#FFF" }}>Mid-Autumn Festival</h2>
         <Carousel photos={midphotos} />
       </div>
     </motion.div>

@@ -30,6 +30,7 @@ export default function Carousel({ photos }) {
             width: "100%",
             objectFit: "cover",
             borderRadius: "12px",
+            border: '10px solid white',
           }}
         />
       </AnimatePresence>
@@ -39,7 +40,7 @@ export default function Carousel({ photos }) {
             style={{
               textAlign: "center",
               marginTop: "8px",
-              color: "#743c2a",
+              color: "#FFF",
               fontSize: "20px",
               fontStyle: "italic",
             }}
