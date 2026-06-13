@@ -236,6 +236,26 @@ li {
   padding: 1rem;
 }
 
+.white-text-big {
+  font-size: 25px;
+  color: #FFF;
+}
+
+.white-text-small {
+  font-size: 15px;
+  color: #FFF;
+}
+
+.black-text-big {
+  font-size: 25px;
+  color: #000;
+}
+
+.black-text-small {
+  font-size: 15px;
+  color: #000;
+}
+
 /* ---------- FOR TABLET ------------------- */
 @media (min-width: 768px) {
   .hero-image {
@@ -302,6 +322,25 @@ li {
   .carousel-center {
     padding: 3rem;
   }
+
+  .white-text-big {
+    font-size: 30px;
+  }
+  
+  .white-text-small {
+    font-size: 20px;
+  }
+
+  .black-text-big {
+    font-size: 30px;
+    color: #000;
+  }
+
+  .black-text-small {
+    font-size: 20px;
+    color: #000;
+  }
+
 }
 
 
@@ -370,5 +409,23 @@ li {
 
   .carousel-center {
     padding: 2rem 8rem 2rem 8rem;
+  }
+
+  .white-text-big {
+    font-size: 35px;
+  }
+
+  .white-text-small {
+    font-size: 25px;
+  }
+
+  .black-text-big {
+    font-size: 35px;
+    color: #000;
+  }
+
+  .black-text-small {
+    font-size: 25px;
+    color: #000;
   }
 }

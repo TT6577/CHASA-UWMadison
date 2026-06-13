@@ -8,6 +8,7 @@ import Carousel from "../components/Carousel.jsx";
 import lnyphoto from "../assets/events/lny/boarddancestill.jpg";
 import lionphoto from "../assets/events/lny/lions.jpg";
 import generalphoto from "../assets/events/lny/generalvibelny.jpg";
+import weirdguyphoto from "../assets/events/lny/weirdguy.jpg";
 import foodphoto from "../assets/events/lny/foodline.jpg";
 import rafflephoto from "../assets/events/lny/TVwinner.jpg";
 
@@ -19,14 +20,37 @@ import mooncakesphoto from "../assets/events/midautumn/mooncakes.jpg";
 import heartpairsphoto from "../assets/events/midautumn/heartpairs.jpg";
 import tablerphoto from "../assets/events/midautumn/tablerhasa.jpg";
 
+// GBM photos
+import matcha1 from "../assets/events/gbms/matcha1.jpg";
+import matcha2 from "../assets/events/gbms/matcha2.jpg";
+import matcha3 from "../assets/events/gbms/matcha3.jpg";
+import movie1 from "../assets/events/gbms/movie1.jpg";
+import movie2 from "../assets/events/gbms/movie2.jpg";
+import movie3 from "../assets/events/gbms/movie3.jpg";
+import halloween from "../assets/events/gbms/halloween.jpg";
+import december from "../assets/events/gbms/december.jpg";
+
+// Fam photos
+import oreos from "../assets/events/fam events/oreos.jpg";
+import wallsit from "../assets/events/fam events/wallsit.jpg";
+import candytoss from "../assets/events/fam events/candytoss.jpg";
+import airplane from "../assets/events/fam events/airplane.jpg";
+import havencollab from "../assets/events/fam events/havencollab.jpg";
+import hugefamcollab from "../assets/events/fam events/hugefamcollab.jpg";
+import famchallenges from "../assets/events/fam events/famchallenges.jpg";
+
+
 // Backgrounds
 import lnybackground from "../assets/backgrounds/lnybackground.jpg";
 import midbackground from "../assets/backgrounds/midbackground.jpg";
+import gbmbackground from "../assets/backgrounds/gbmbackground.jpg";
+import fambackground from "../assets/backgrounds/fambackground.jpg";
 
 const lnyphotos = [
   { src: lnyphoto, caption: "E-board Dance Performance 10/10" },
   { src: lionphoto, caption: "Lion Dance & Drums" },
   { src: generalphoto, caption: "General Vibe of LNY" },
+  { src: weirdguyphoto, caption: "The Lions' Weird Friend" },
   { src: foodphoto, caption: "Chinese Dinner" },
   { src: rafflephoto, caption: "Someone's Grandma Wins a TV" },
 ];
@@ -38,6 +62,27 @@ const midphotos = [
   { src: mooncakesphoto, caption: "Free Mooncakes" },
   { src: heartpairsphoto, caption: "Find Your Group Activity" },
   { src: tablerphoto, caption: "Collab Tabler Trifold" },
+];
+
+const gbmphotos = [
+  { src: matcha1, caption: "September Matcha & Totes Kickoff" },
+  { src: matcha2, caption: "September Kickoff Vibe" },
+  { src: matcha3, caption: "E-board Serving Matcha" },
+  { src: movie1, caption: "K-pop Demon Hunters Movie Night" },
+  { src: movie2, caption: "Homemade Food at Movie Night" },
+  { src: movie3, caption: "Digging In " },
+  { src: halloween, caption: "Halloween Costumes" },
+  { src: december, caption: "President Studying at Christmas GBM" },
+];
+
+const famphotos = [
+  { src: oreos, caption: "Oreo Balance Challenge - Fam Clash" },
+  { src: wallsit, caption: "Wallsit Endurance Challenge" },
+  { src: candytoss, caption: "Candy Toss Challenge" },
+  { src: airplane, caption: "Airplane Challenge" },
+  { src: havencollab, caption: "Fam Reveal Collab" },
+  { src: hugefamcollab, caption: "Fam Reveal Collab #2" },
+  { src: famchallenges, caption: "September Fam Challenges" },
 ];
 
 export default function Home() {
@@ -86,10 +131,10 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <h2 style={{ color: "#FFF" }}>Lunar New Year</h2>
+        <h2 className='white-text-big'>Lunar New Year</h2>
         <Carousel photos={lnyphotos} />
       </div>
-      <div style={{ height: "20px" }} />
+      <div style={{ height: "30px" }} />
       <div
         className="carousel-center"
         style={{
@@ -98,8 +143,32 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <h2 style={{ color: "#FFF" }}>Mid-Autumn Festival</h2>
+        <h2 className='white-text-big'>Mid-Autumn Festival</h2>
         <Carousel photos={midphotos} />
+      </div>
+      <div style={{ height: "30px" }} />
+      <div
+        className="carousel-center"
+        style={{
+          backgroundImage: `url(${gbmbackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: 'center',
+        }}
+      >
+        <h2 className='black-text-big'>General Body Meetings (GBMs)</h2>
+        <Carousel photos={gbmphotos} />
+      </div>
+      <div style={{ height: "30px" }} />
+      <div
+        className="carousel-center"
+        style={{
+          backgroundImage: `url(${fambackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: 'center',
+        }}
+      >
+        <h2 className='black-text-big'>Fam Events</h2>
+        <Carousel photos={famphotos} />
       </div>
     </motion.div>
   );

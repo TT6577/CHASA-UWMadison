@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Carousel({ photos }) {
@@ -8,47 +8,64 @@ export default function Carousel({ photos }) {
   const prev = () => setCurrent((i) => (i === 0 ? photos.length - 1 : i - 1));
   const next = () => setCurrent((i) => (i === photos.length - 1 ? 0 : i + 1));
 
+  useEffect(() => {
+    const timer = setTimeout(() => next(), 6000);
+    return () => clearTimeout(timer);
+  });
+
   return (
-    <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+    <div
+      style={{ position: "relative", width: "100%", overflow: "hidden" }}
+    >
       {/* Image */}
       <AnimatePresence mode="wait">
-        <motion.img
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.3 }}
           onTouchStart={(e) => (touchStart.current = e.touches[0].clientX)}
           onTouchEnd={(e) => {
             const diff = touchStart.current - e.changedTouches[0].clientX;
             if (diff > 50) next();
             if (diff < -50) prev();
           }}
-          key={current}
-          src={photos[current].src}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.3 }}
-          className="carousel-image"
-          style={{
-            width: "100%",
-            objectFit: "cover",
-            borderRadius: "12px",
-            border: '10px solid white',
-          }}
-        />
-      </AnimatePresence>
-      <div style={{ minHeight: "30px", textAlign: "center", marginTop: "8px" }}>
-        {photos[current].caption && (
-          <p
+        >
+          <img
+            src={photos[current].src}
+            className="carousel-image"
             style={{
+              width: "100%",
+              objectFit: "cover",
+              borderRadius: "12px",
+              border: "10px solid white",
+            }}
+          />
+          <div
+            style={{
+              minHeight: "30px",
               textAlign: "center",
-              marginTop: "8px",
-              color: "#FFF",
-              fontSize: "20px",
-              fontStyle: "italic",
+              width: "fit-content",
+              minWidth: "200px",
+              maxWidth: "90%",
+              backgroundColor: "#FFF",
+              borderRadius: "0 0 15px 15px",
+              margin: "0 auto",
+              padding: "0 2rem",
             }}
           >
-            {photos[current].caption}
-          </p>
-        )}
-      </div>
+            {photos[current].caption && (
+              <p
+                className="black-text-small"
+                style={{ textAlign: "center", fontStyle: "italic" }}
+              >
+                {photos[current].caption}
+              </p>
+            )}
+          </div>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Left / right arrows */}
       <button
