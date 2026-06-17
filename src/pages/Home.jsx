@@ -11,7 +11,7 @@ import {
 import { ChevronsDown, CalendarDays, MapPin } from "lucide-react";
 import heroImage from "../assets/heros/midautumn.jpg";
 import chasalogo from "../assets/logos/chasalogo.png";
-import thankyou from "../assets/events/thankyou.jpg";
+import thankyou from "../assets/events/thankyou.JPG";
 import Card from "../components/Card.jsx";
 
 // Edit announcements here - still looking into making it easier for PR/secretary chair to edit announcements
