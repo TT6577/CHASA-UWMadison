@@ -5,39 +5,53 @@ import Card from "../components/Card.jsx";
 import Carousel from "../components/Carousel.jsx";
 
 // LNY photos
-import lnyphoto from "../assets/events/lny/boarddancestill.jpg";
-import lionphoto from "../assets/events/lny/lions.jpg";
-import generalphoto from "../assets/events/lny/generalvibelny.jpg";
-import weirdguyphoto from "../assets/events/lny/weirdguy.jpg";
-import foodphoto from "../assets/events/lny/foodline.jpg";
-import rafflephoto from "../assets/events/lny/TVwinner.jpg";
+import boarddancestill from "../assets/events/lny/boarddancestill.webp";
+import lions from "../assets/events/lny/lions.webp";
+import lnyfood from "../assets/events/lny/lnyfood.webp";
+import lnyfoodmaddy from "../assets/events/lny/lnyfoodmaddy.webp";
+import lnygeneral from "../assets/events/lny/lnygeneral.webp";
+import lnyseado from "../assets/events/lny/lnyseado.webp";
+import lnyvsa from "../assets/events/lny/lnyvsa.webp";
+import tvwinner from "../assets/events/lny/tvwinner.webp";
+import weirdguy from "../assets/events/lny/weirdguy.webp";
 
 // Mid-autumn photos
-import musicalchairsphoto from "../assets/events/midautumn/musicalchairs.jpg";
-import culturalphoto from "../assets/events/midautumn/culturalsegment.jpg";
-import generalvibephoto from "../assets/events/midautumn/generalvibemid.jpg";
-import mooncakesphoto from "../assets/events/midautumn/mooncakes.jpg";
-import heartpairsphoto from "../assets/events/midautumn/heartpairs.jpg";
-import tablerphoto from "../assets/events/midautumn/tablerhasa.jpg";
+import midcake from "../assets/events/midautumn/midcake.webp";
+import midchairs1 from "../assets/events/midautumn/midchairs1.webp";
+import midchairs2 from "../assets/events/midautumn/midchairs2.webp";
+import midculture from "../assets/events/midautumn/midculture.webp";
+import midgeneral from "../assets/events/midautumn/midgeneral.webp";
+import midhasa from "../assets/events/midautumn/midhasa.webp";
+import midheart from "../assets/events/midautumn/midheart.webp";
+import midpresidents from "../assets/events/midautumn/midpresidents.webp";
 
 // GBM photos
-import matcha1 from "../assets/events/gbms/matcha1.jpg";
-import matcha2 from "../assets/events/gbms/matcha2.jpg";
-import matcha3 from "../assets/events/gbms/matcha3.jpg";
-import movie1 from "../assets/events/gbms/movie1.jpg";
-import movie2 from "../assets/events/gbms/movie2.jpg";
-import movie3 from "../assets/events/gbms/movie3.jpg";
-import halloween from "../assets/events/gbms/halloween.jpg";
-import december from "../assets/events/gbms/december.jpg";
+import december from "../assets/events/gbms/december.webp";
+import halloween from "../assets/events/gbms/halloween.webp";
+import matcha1 from "../assets/events/gbms/matcha1.webp";
+import matcha2 from "../assets/events/gbms/matcha2.webp";
+import matcha3 from "../assets/events/gbms/matcha3.webp";
+import movie1 from "../assets/events/gbms/movie1.webp";
+import movie2 from "../assets/events/gbms/movie2.webp";
+import movie3 from "../assets/events/gbms/movie3.webp";
 
 // Fam photos
-import oreos from "../assets/events/fam events/oreos.jpg";
-import wallsit from "../assets/events/fam events/wallsit.jpg";
-import candytoss from "../assets/events/fam events/candytoss.jpg";
-import airplane from "../assets/events/fam events/airplane.jpg";
-import havencollab from "../assets/events/fam events/havencollab.jpg";
-import hugefamcollab from "../assets/events/fam events/hugefamcollab.jpg";
-import famchallenges from "../assets/events/fam events/famchallenges.jpg";
+import airplanes from "../assets/events/fam events/airplanes.webp";
+import candytoss from "../assets/events/fam events/candytoss.webp";
+import famchallenges from "../assets/events/fam events/famchallenges.webp";
+import havencollab from "../assets/events/fam events/havencollab.webp";
+import oreos from "../assets/events/fam events/oreos.webp";
+import sichuancollab from "../assets/events/fam events/sichuancollab.webp";
+import wallsit1 from "../assets/events/fam events/wallsit1.webp";
+import wallsit2 from "../assets/events/fam events/wallsit2.webp";
+
+// Volunteer photos
+import conhaul from "../assets/events/volunteer/conhaul.webp";
+import conline from "../assets/events/volunteer/conline.webp";
+import conmogging from "../assets/events/volunteer/conmogging.webp";
+import conpizzaafter from "../assets/events/volunteer/conpizzaafter.webp";
+import conpizzabefore from "../assets/events/volunteer/conpizzabefore.webp";
+import mcmvolunteer from "../assets/events/volunteer/mcmvolunteer.webp";
 
 
 // Backgrounds
@@ -45,23 +59,29 @@ import lnybackground from "../assets/backgrounds/lnybackground.jpg";
 import midbackground from "../assets/backgrounds/midbackground.jpg";
 import gbmbackground from "../assets/backgrounds/gbmbackground.jpg";
 import fambackground from "../assets/backgrounds/fambackground.jpg";
+import volunteerbackground from "../assets/backgrounds/volunteerbackground.jpg";
 
 const lnyphotos = [
-  { src: lnyphoto, caption: "E-board Dance Performance 10/10" },
-  { src: lionphoto, caption: "Lion Dance & Drums" },
-  { src: generalphoto, caption: "General Vibe of LNY" },
-  { src: weirdguyphoto, caption: "The Lions' Weird Friend" },
-  { src: foodphoto, caption: "Chinese Dinner" },
-  { src: rafflephoto, caption: "Someone's Grandma Wins a TV" },
+  { src: boarddancestill, caption: "E-board Dance Performance 10/10" },
+  { src: lions, caption: "Lion Dance & Drums" },
+  { src: lnygeneral, caption: "General Vibe of LNY" },
+  { src: weirdguy, caption: "The Lions' Weird Friend" },
+  { src: lnyfood, caption: "Chinese Dinner" },
+  { src: tvwinner, caption: "Someone's Grandma Wins a TV" },
+  { src: lnyfoodmaddy, caption: "to be captioned" },
+  { src: lnyseado, caption: "to be captioned" },
+  { src: lnyvsa, caption: "to be captioned" },
 ];
 
 const midphotos = [
-  { src: musicalchairsphoto, caption: "Musical Chairs Mishap" },
-  { src: culturalphoto, caption: "Educational Cultural Segment" },
-  { src: generalvibephoto, caption: "General Vibe of Mid-Autumn" },
-  { src: mooncakesphoto, caption: "Free Mooncakes" },
-  { src: heartpairsphoto, caption: "Find Your Group Activity" },
-  { src: tablerphoto, caption: "Collab Tabler Trifold" },
+  { src: midchairs1, caption: "Musical Chairs Mishap" },
+  { src: midchairs2, caption: "to be captioned" },
+  { src: midculture, caption: "Educational Cultural Segment" },
+  { src: midgeneral, caption: "General Vibe of Mid-Autumn" },
+  { src: midcake, caption: "Free Mooncakes" },
+  { src: midheart, caption: "Find Your Group Activity" },
+  { src: midhasa, caption: "Collab Tabler Trifold" },
+  { src: midpresidents, caption: "to be captioned" },
 ];
 
 const gbmphotos = [
@@ -70,19 +90,29 @@ const gbmphotos = [
   { src: matcha3, caption: "E-board Serving Matcha" },
   { src: movie1, caption: "K-pop Demon Hunters Movie Night" },
   { src: movie2, caption: "Homemade Food at Movie Night" },
-  { src: movie3, caption: "Digging In " },
+  { src: movie3, caption: "Digging In" },
   { src: halloween, caption: "Halloween Costumes" },
   { src: december, caption: "President Studying at Christmas GBM" },
 ];
 
 const famphotos = [
   { src: oreos, caption: "Oreo Balance Challenge - Fam Clash" },
-  { src: wallsit, caption: "Wallsit Endurance Challenge" },
+  { src: wallsit1, caption: "Wallsit Endurance Challenge" },
+  { src: wallsit2, caption: "to be captioned" },
   { src: candytoss, caption: "Candy Toss Challenge" },
-  { src: airplane, caption: "Airplane Challenge" },
+  { src: airplanes, caption: "Airplane Challenge" },
   { src: havencollab, caption: "Fam Reveal Collab" },
-  { src: hugefamcollab, caption: "Fam Reveal Collab #2" },
+  { src: sichuancollab, caption: "to be captioned" },
   { src: famchallenges, caption: "September Fam Challenges" },
+];
+
+const volunteerphotos = [
+  { src: mcmvolunteer, caption: "Halloween Volunteering at Madison Children's Museum" },
+  { src: conline, caption: "First Concessions!!!" },
+  { src: conpizzabefore, caption: "Before Pizza Concessions" },
+  { src: conpizzaafter, caption: "After Pizza Concessions" },
+  { src: conmogging, caption: "Getting Mogged at Concessions" },
+  { src: conhaul, caption: "Crazy Food Haul" },
 ];
 
 export default function Home() {
@@ -131,7 +161,7 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <h2 className='white-text-big'>Lunar New Year</h2>
+        <h2 className='white-text-big'>Lunar New Year (2/7/2026)</h2>
         <Carousel photos={lnyphotos} />
       </div>
       <div style={{ height: "30px" }} />
@@ -143,7 +173,7 @@ export default function Home() {
           backgroundPosition: 'center',
         }}
       >
-        <h2 className='white-text-big'>Mid-Autumn Festival</h2>
+        <h2 className='white-text-big'>Mid-Autumn Festival (10/11/2025)</h2>
         <Carousel photos={midphotos} />
       </div>
       <div style={{ height: "30px" }} />
@@ -169,6 +199,18 @@ export default function Home() {
       >
         <h2 className='black-text-big'>Fam Events</h2>
         <Carousel photos={famphotos} />
+      </div>
+      <div style={{ height: "30px" }} />
+      <div
+        className="carousel-center"
+        style={{
+          backgroundImage: `url(${volunteerbackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: 'center',
+        }}
+      >
+        <h2 className='black-text-big'>Volunteer/Fundraising Events</h2>
+        <Carousel photos={volunteerphotos} />
       </div>
     </motion.div>
   );

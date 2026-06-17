@@ -13,12 +13,16 @@ export default function Carousel({ photos }) {
     return () => clearTimeout(timer);
   });
 
+  useEffect(() => {
+    const nextIndex = (current + 1) % photos.length;
+    const img = new Image();
+    img.src = photos[nextIndex].src;
+  }, [current]);
+
   return (
-    <div
-      style={{ position: "relative", width: "100%", overflow: "hidden" }}
-    >
+    <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
       {/* Image */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={current}
           initial={{ opacity: 0, x: 100 }}
@@ -34,6 +38,7 @@ export default function Carousel({ photos }) {
         >
           <img
             src={photos[current].src}
+            loading="lazy"
             className="carousel-image"
             style={{
               width: "100%",

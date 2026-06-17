@@ -256,6 +256,10 @@ li {
   color: #000;
 }
 
+.smaller-image {
+  height: 200px;
+}
+
 /* ---------- FOR TABLET ------------------- */
 @media (min-width: 768px) {
   .hero-image {
@@ -341,6 +345,10 @@ li {
     color: #000;
   }
 
+  .smaller-image {
+    height: 350px;
+  }
+
 }
 
 
@@ -403,7 +411,7 @@ li {
   }
 
   .carousel-image {
-    height: 650px;
+    height: 620px;
     background-position: center;
   }
 
@@ -428,4 +436,9 @@ li {
     font-size: 25px;
     color: #000;
   }
+
+  .smaller-image {
+    height: 400px;
+  }
+
 }

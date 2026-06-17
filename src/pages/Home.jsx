@@ -11,6 +11,7 @@ import {
 import { ChevronsDown, CalendarDays, MapPin } from "lucide-react";
 import heroImage from "../assets/heros/midautumn.jpg";
 import chasalogo from "../assets/logos/chasalogo.png";
+import thankyou from "../assets/events/thankyou.jpg";
 import Card from "../components/Card.jsx";
 
 // Edit announcements here - still looking into making it easier for PR/secretary chair to edit announcements
@@ -214,6 +215,8 @@ export default function Home() {
             Interns
           </NavLink>
         </div>
+        <img src={thankyou} className='smaller-image' style={{alignSelf: 'center'}}/>
+        <h1 style={{color: "#743c2a"}}>Thank you for visiting us!</h1>
       </Card>
 
       <div style={{ height: "50px" }} />
