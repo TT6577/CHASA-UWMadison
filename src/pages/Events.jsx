@@ -46,12 +46,14 @@ import wallsit1 from "../assets/events/fam events/wallsit1.webp";
 import wallsit2 from "../assets/events/fam events/wallsit2.webp";
 
 // Volunteer photos
+import mcmvolunteer from "../assets/events/volunteer/mcmvolunteer.webp";
+import slowfoods from "../assets/events/volunteer/slowfoods.webp";
 import conhaul from "../assets/events/volunteer/conhaul.webp";
 import conline from "../assets/events/volunteer/conline.webp";
 import conmogging from "../assets/events/volunteer/conmogging.webp";
 import conpizzaafter from "../assets/events/volunteer/conpizzaafter.webp";
 import conpizzabefore from "../assets/events/volunteer/conpizzabefore.webp";
-import mcmvolunteer from "../assets/events/volunteer/mcmvolunteer.webp";
+
 
 
 // Backgrounds
@@ -65,49 +67,50 @@ const lnyphotos = [
   { src: boarddancestill, caption: "E-board Dance Performance 10/10" },
   { src: lions, caption: "Lion Dance & Drums" },
   { src: lnygeneral, caption: "General Vibe of LNY" },
-  { src: weirdguy, caption: "The Lions' Weird Friend" },
-  { src: lnyfood, caption: "Chinese Dinner" },
-  { src: tvwinner, caption: "Someone's Grandma Wins a TV" },
-  { src: lnyfoodmaddy, caption: "to be captioned" },
-  { src: lnyseado, caption: "to be captioned" },
-  { src: lnyvsa, caption: "to be captioned" },
+  { src: weirdguy, caption: "Weird Lion Dance Guy" },
+  { src: lnyfood, caption: "FREE LNY Dinner!!! (yum)" },
+  { src: tvwinner, caption: "Grammy Wins a TV" },
+  { src: lnyfoodmaddy, caption: "Maddy and Eric Serving Food With a Smile" },
+  { src: lnyseado, caption: "SEADO, one of our many cultural performers" },
+  { src: lnyvsa, caption: "VSA Tablers!!" },
 ];
 
 const midphotos = [
   { src: midchairs1, caption: "Musical Chairs Mishap" },
-  { src: midchairs2, caption: "to be captioned" },
+  { src: midchairs2, caption: "Musical Chairs Elimination" },
   { src: midculture, caption: "Educational Cultural Segment" },
   { src: midgeneral, caption: "General Vibe of Mid-Autumn" },
   { src: midcake, caption: "Free Mooncakes" },
   { src: midheart, caption: "Find Your Group Activity" },
-  { src: midhasa, caption: "Collab Tabler Trifold" },
-  { src: midpresidents, caption: "to be captioned" },
+  { src: midhasa, caption: "HASA Tablers!!" },
+  { src: midpresidents, caption: "2025 CHASA Presidents Amy and Julia!!" },
 ];
 
 const gbmphotos = [
   { src: matcha1, caption: "September Matcha & Totes Kickoff" },
-  { src: matcha2, caption: "September Kickoff Vibe" },
-  { src: matcha3, caption: "E-board Serving Matcha" },
-  { src: movie1, caption: "K-pop Demon Hunters Movie Night" },
-  { src: movie2, caption: "Homemade Food at Movie Night" },
-  { src: movie3, caption: "Digging In" },
-  { src: halloween, caption: "Halloween Costumes" },
-  { src: december, caption: "President Studying at Christmas GBM" },
+  { src: matcha2, caption: "E-board Serving Matcha" },
+  { src: matcha3, caption: "September Kickoff Vibe" },
+  { src: movie1, caption: "CHASAgiving Food/Movie Night" },
+  { src: movie2, caption: "Digging In!!!" },
+  { src: movie3, caption: "K-Pop Demon Hunters Singalong" },
+  { src: halloween, caption: "Haunted Halloween Hangout" },
+  { src: december, caption: "2026 President Grace Studying at Christmas GBM" },
 ];
 
 const famphotos = [
   { src: oreos, caption: "Oreo Balance Challenge - Fam Clash" },
   { src: wallsit1, caption: "Wallsit Endurance Challenge" },
-  { src: wallsit2, caption: "to be captioned" },
+  { src: wallsit2, caption: "Wallsit Part 2 - so tuff" },
   { src: candytoss, caption: "Candy Toss Challenge" },
   { src: airplanes, caption: "Airplane Challenge" },
   { src: havencollab, caption: "Fam Reveal Collab" },
-  { src: sichuancollab, caption: "to be captioned" },
-  { src: famchallenges, caption: "September Fam Challenges" },
+  { src: sichuancollab, caption: "Fam Collab #2" },
+  { src: famchallenges, caption: "2025 September Fam Challenges" },
 ];
 
 const volunteerphotos = [
   { src: mcmvolunteer, caption: "Halloween Volunteering at Madison Children's Museum" },
+  { src: slowfoods, caption: "SlowFoods UW Volunteering" },
   { src: conline, caption: "First Concessions!!!" },
   { src: conpizzabefore, caption: "Before Pizza Concessions" },
   { src: conpizzaafter, caption: "After Pizza Concessions" },
