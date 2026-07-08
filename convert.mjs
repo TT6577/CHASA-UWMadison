@@ -8,6 +8,7 @@ const folders = [
   'src/assets/events/gbms',
   'src/assets/events/fam events',
   'src/assets/events/volunteer',
+  'src/assets/history'
 ];
 
 for (const folder of folders) {

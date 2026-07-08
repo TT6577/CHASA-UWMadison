@@ -54,8 +54,6 @@ import conmogging from "../assets/events/volunteer/conmogging.webp";
 import conpizzaafter from "../assets/events/volunteer/conpizzaafter.webp";
 import conpizzabefore from "../assets/events/volunteer/conpizzabefore.webp";
 
-
-
 // Backgrounds
 import lnybackground from "../assets/backgrounds/lnybackground.jpg";
 import midbackground from "../assets/backgrounds/midbackground.jpg";
@@ -109,7 +107,10 @@ const famphotos = [
 ];
 
 const volunteerphotos = [
-  { src: mcmvolunteer, caption: "Halloween Volunteering at Madison Children's Museum" },
+  {
+    src: mcmvolunteer,
+    caption: "Halloween Volunteering at Madison Children's Museum",
+  },
   { src: slowfoods, caption: "SlowFoods UW Volunteering" },
   { src: conline, caption: "First Concessions!!!" },
   { src: conpizzabefore, caption: "Before Pizza Concessions" },
@@ -148,7 +149,16 @@ export default function Home() {
           <Link to="/fams" style={{ color: "#c9ada1" }}>
             more info here
           </Link>
-          ).
+          ). Each Fam organizes their own hangouts independently (usually by the
+          Fam leader), but there are also CHASA-led Fam events where all Fams
+          come together for activities.
+        </p>
+        <p className="footer-text text-center">
+          We also run volunteer events, such as the SlowFood and Madison's
+          Children Museum charity collaborations. We only started doing
+          concessions to raise funds in the 25-26 academic year, and only opened
+          them to E-board only, but we are looking to let general members come
+          join us as well.
         </p>
       </div>
       <div style={{ height: "10px" }} />
@@ -161,10 +171,10 @@ export default function Home() {
         style={{
           backgroundImage: `url(${lnybackground})`,
           backgroundSize: "cover",
-          backgroundPosition: 'center',
+          backgroundPosition: "center",
         }}
       >
-        <h2 className='white-text-big'>Lunar New Year (2/7/2026)</h2>
+        <h2 className="white-text-big">Lunar New Year (2/7/2026)</h2>
         <Carousel photos={lnyphotos} />
       </div>
       <div style={{ height: "30px" }} />
@@ -173,10 +183,10 @@ export default function Home() {
         style={{
           backgroundImage: `url(${midbackground})`,
           backgroundSize: "cover",
-          backgroundPosition: 'center',
+          backgroundPosition: "center",
         }}
       >
-        <h2 className='white-text-big'>Mid-Autumn Festival (10/11/2025)</h2>
+        <h2 className="white-text-big">Mid-Autumn Festival (10/11/2025)</h2>
         <Carousel photos={midphotos} />
       </div>
       <div style={{ height: "30px" }} />
@@ -185,10 +195,10 @@ export default function Home() {
         style={{
           backgroundImage: `url(${gbmbackground})`,
           backgroundSize: "cover",
-          backgroundPosition: 'center',
+          backgroundPosition: "center",
         }}
       >
-        <h2 className='black-text-big'>General Body Meetings (GBMs)</h2>
+        <h2 className="black-text-big">General Body Meetings (GBMs)</h2>
         <Carousel photos={gbmphotos} />
       </div>
       <div style={{ height: "30px" }} />
@@ -197,10 +207,10 @@ export default function Home() {
         style={{
           backgroundImage: `url(${fambackground})`,
           backgroundSize: "cover",
-          backgroundPosition: 'center',
+          backgroundPosition: "center",
         }}
       >
-        <h2 className='black-text-big'>Fam Events</h2>
+        <h2 className="black-text-big">Fam Events</h2>
         <Carousel photos={famphotos} />
       </div>
       <div style={{ height: "30px" }} />
@@ -209,10 +219,10 @@ export default function Home() {
         style={{
           backgroundImage: `url(${volunteerbackground})`,
           backgroundSize: "cover",
-          backgroundPosition: 'center',
+          backgroundPosition: "center",
         }}
       >
-        <h2 className='black-text-big'>Volunteer/Fundraising Events</h2>
+        <h2 className="black-text-big">Volunteer/Fundraising Events</h2>
         <Carousel photos={volunteerphotos} />
       </div>
     </motion.div>
