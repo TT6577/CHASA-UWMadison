@@ -282,6 +282,11 @@ li {
   text-align: left;
 }
 
+.history-list {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ---------- FOR TABLET ------------------- */
 @media (min-width: 768px) {
   .hero-image {
@@ -391,6 +396,11 @@ li {
     list-style-type: circle;
     padding-left: 3rem;
     text-align: left;
+  }
+
+  .history-list {
+    display: flex;
+    flex-direction: column;
   }
 
 }
@@ -505,6 +515,11 @@ li {
     list-style-type: circle;
     padding-left: 5rem;
     text-align: left;
+  }
+
+  .history-list {
+    display: flex;
+    flex-direction: row;
   }
 
 }

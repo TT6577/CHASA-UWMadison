@@ -7,8 +7,11 @@ import logo2017 from "../assets/logos/2017chasalogo.jpg";
 
 import board20to21 from "../assets/history/2020-2021.webp";
 import board21to22 from "../assets/history/2021-2022.webp";
+import board22to23group from "../assets/history/2022-2023group.webp";
 import board23to24 from "../assets/history/2023-2024.webp";
+import board23to24group from "../assets/history/2023-2024group.webp";
 import board24to25 from "../assets/history/2024-2025.webp";
+import board24to25group from "../assets/history/2024-2025group.webp";
 import board25to26 from "../assets/history/2025-2026.webp";
 import board25to26interns from "../assets/history/2025-2026interns.webp";
 
@@ -91,6 +94,7 @@ const lists = [
       "Family - Lydia Zheng",
       "INTERNS: Alan Liang, Sophia Gerhartz, Vivian Hark, Kaci Moy, Grace Drayton, Emma Quie, Helena Wei",
     ],
+    photos: [board22to23group],
   },
   {
     title: "2023-2024",
@@ -105,7 +109,7 @@ const lists = [
       "Family - Lydia Zheng",
       "INTERNS: Kevin Zhao, Sophie Zheng, David Huang, Anna Sun, Amy Liang, Rachel Tze, Julia Tse",
     ],
-    photos: [board23to24],
+    photos: [board23to24, board23to24group],
   },
   {
     title: "2024-2025",
@@ -121,7 +125,7 @@ const lists = [
       "Senior Advisor - Lydia Zheng",
       "INTERNS: Grace Wu, Maddy Andresen, Devin Zeng, Austin Zheng, Kevin Sun, Sabrina Yang, Josh Xue, Bethany Vance",
     ],
-    photos: [board24to25],
+    photos: [board24to25, board24to25group],
   },
   {
     title: "2025-2026",
