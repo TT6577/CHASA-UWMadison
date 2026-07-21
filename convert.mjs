@@ -2,6 +2,9 @@ import sharp from 'sharp';
 import { readdirSync } from 'fs';
 import { join, basename, extname } from 'path';
 
+// HOW TO RUN: run 'node convert.mjs' in powershell
+
+
 const folders = [
   'src/assets/events/lny',
   'src/assets/events/midautumn',
