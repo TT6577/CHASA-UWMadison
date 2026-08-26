@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-#root { /* Required bc by default root has margins which make the website look bad */
+#root {
+  /* Required bc by default root has margins which make the website look bad */
   margin: 0;
   padding: 0;
   width: 100%;
@@ -8,12 +9,14 @@
 
 body {
   background-color: #c9ada1;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: 'Fredoka', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Fredoka", sans-serif;
 }
 
 p {
@@ -29,7 +32,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-top: 0px;
 }
 
@@ -39,19 +42,22 @@ a {
   font-weight: bold;
   padding: 0.2rem 0.8rem;
   border-radius: 12px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: none;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   box-shadow: inset 0px 4px 2px #363636;
   background-color: #7f8671;
 }
 
 .nav-link.active {
-  color: #FFFFFF;
+  color: #ffffff;
   box-shadow: inset 0px 4px 2px #363636;
   background-color: #7f8671;
 }
@@ -78,12 +84,12 @@ a {
 }
 
 #content {
-  -ms-overflow-style: none;  /* IE */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0px 0px 8px -3px #121212;
   margin: 2rem;
@@ -110,7 +116,7 @@ li {
 }
 
 .footer-text li {
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -123,7 +129,7 @@ li {
 }
 
 .footer-text {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .bright-link {
@@ -148,20 +154,19 @@ li {
   font-weight: bold;
   padding: 1rem 2rem;
   border-radius: 12px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: none; /* explicitly no shadow by default */
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .dl-button:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   box-shadow: inset 0px 4px 2px #363636;
   background-color: #7f8671;
 }
-
-
-
-
 
 /* All mobile/tablet/pc formatting/styling differences are settled here */
 
@@ -238,12 +243,12 @@ li {
 
 .white-text-big {
   font-size: 25px;
-  color: #FFF;
+  color: #fff;
 }
 
 .white-text-small {
   font-size: 15px;
-  color: #FFF;
+  color: #fff;
 }
 
 .black-text-big {
@@ -285,6 +290,15 @@ li {
 .history-list {
   display: flex;
   flex-direction: column;
+}
+
+.intern-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  text-align: center;
+  gap: 8px;
+  background-color: #436043;
 }
 
 /* ---------- FOR TABLET ------------------- */
@@ -334,7 +348,7 @@ li {
   }
 
   .navbar-mobile {
-    display: none !important;  /* hide even if menuOpen is true */
+    display: none !important; /* hide even if menuOpen is true */
   }
 
   .green-background-div {
@@ -357,7 +371,7 @@ li {
   .white-text-big {
     font-size: 30px;
   }
-  
+
   .white-text-small {
     font-size: 20px;
   }
@@ -403,8 +417,15 @@ li {
     flex-direction: column;
   }
 
+  .intern-div {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 8px;
+    background-color: #436043;
+  }
 }
-
 
 /* ---------- FOR PC ------------------- */
 @media (min-width: 1024px) {
@@ -453,7 +474,7 @@ li {
   }
 
   .navbar-mobile {
-    display: none !important;  /* hide even if menuOpen is true */
+    display: none !important; /* hide even if menuOpen is true */
   }
 
   .green-background-div {
@@ -522,4 +543,12 @@ li {
     flex-direction: row;
   }
 
+  .intern-div {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    text-align: left;
+    gap: 8px;
+    background-color: #436043;
+  }
 }

@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FileDown, ExternalLink } from "lucide-react";
-
 
 import logo2017 from "../assets/logos/2017chasalogo.jpg";
 
@@ -185,6 +183,12 @@ export default function Home() {
             </Link>{" "}
             page!)
           </p>
+          <p
+            className="white-text-small"
+            style={{ lineHeight: "20px", fontSize: "15px" }}
+          >
+            *(Pictured here was our 2025-26 exec board)
+          </p>
         </div>
       </div>
 
@@ -192,7 +196,14 @@ export default function Home() {
         <Card key={l.title}>
           <List list={l}>
             {l.photos && l.photos.length > 0 && (
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", paddingRight: '2rem' }}>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "1rem",
+                  flexWrap: "wrap",
+                  paddingRight: "2rem",
+                }}
+              >
                 {l.photos.map((photo, i) => (
                   <img
                     key={i}
