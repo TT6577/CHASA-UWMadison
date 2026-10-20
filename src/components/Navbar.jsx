@@ -60,7 +60,7 @@ export default function Navbar() {
           <NavLink className="nav-link" to="/about">About</NavLink>
           <NavLink className="nav-link" to="/contacts">Contacts</NavLink>
           <NavLink className="nav-link" to="/events">Events</NavLink>
-          <NavLink className="nav-link" to="/fams">Fams</NavLink>
+          {/* <NavLink className="nav-link" to="/fams">Fams</NavLink> */}
           <NavLink className="nav-link" to="/history">History</NavLink>
           <NavLink className="nav-link" to="/interns">Interns</NavLink>
         </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <NavLink className="nav-link" to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
           <NavLink className="nav-link" to="/contacts" onClick={() => setMenuOpen(false)}>Contacts</NavLink>
           <NavLink className="nav-link" to="/events" onClick={() => setMenuOpen(false)}>Events</NavLink>
-          <NavLink className="nav-link" to="/fams" onClick={() => setMenuOpen(false)}>Fams</NavLink>
+          {/* <NavLink className="nav-link" to="/fams" onClick={() => setMenuOpen(false)}>Fams</NavLink> */}
           <NavLink className="nav-link" to="/history" onClick={() => setMenuOpen(false)}>History</NavLink>
           <NavLink className="nav-link" to="/interns" onClick={() => setMenuOpen(false)}>Interns</NavLink>
         </div>

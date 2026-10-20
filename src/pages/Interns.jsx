@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import board25to26interns from "../assets/history/2025-2026interns.webp";
+import board26to27interns from "../assets/history/2026-2027interns.webp";
 
 export default function Home() {
   return (
@@ -36,11 +36,13 @@ export default function Home() {
             className="white-text-small"
             style={{ lineHeight: "20px", fontSize: "15px" }}
           >
-            *(Pictured here were our 2025-26 interns!)
+            *(Pictured here were our 2026-27 interns!)
           </p>
         </div>
-        <img className="history-hero" src={board25to26interns} />
+        <img className="history-hero" src={board26to27interns} />
       </div>
+      <div style={{ height: "60px" }}></div>
+      <p>Construction in progress...</p>
     </motion.div>
   );
 }

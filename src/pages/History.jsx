@@ -12,9 +12,13 @@ import board24to25 from "../assets/history/2024-2025.webp";
 import board24to25group from "../assets/history/2024-2025group.webp";
 import board25to26 from "../assets/history/2025-2026.webp";
 import board25to26interns from "../assets/history/2025-2026interns.webp";
+import board26to27 from "../assets/history/2026-2027.webp";
+import board26to27interns from "../assets/history/2026-2027interns.webp";
 
 import Card from "../components/Card.jsx";
 import List from "../components/List.jsx";
+
+import "./History.css";
 
 const lists = [
   {
@@ -140,6 +144,22 @@ const lists = [
       "INTERNS: Vivienne Fensin, Rebecca Tze, Emily Lin, Angela Chan, Oscar Zheng, Christina Zhao, Terry Gan",
     ],
     photos: [board25to26, board25to26interns],
+  },
+  {
+    title: "2026-2027",
+    items: [
+      "Co-Presidents - Grace Wu and Maddy Andresen",
+      "Secretary - Wilson Lee",
+      "PR - Emily Lin",
+      "Event Coordinators - Kaozong Vang",
+      "Finance - Tyler Tang and Angela Chan",
+      "Culture - Terry Gan",
+      "Design - Lucy Chen and Vivienne Fensin",
+      "Family - Andrew Xia",
+      "Senior Advisor - Amy Liang and Julia Tse",
+      "INTERNS: Grace Xue, Benjamin Lu, Kyla Chen, YiMing Lin, Jennie Hwang, Danny Lin",
+    ],
+    photos: [board26to27, board26to27interns],
   },
 ];
 

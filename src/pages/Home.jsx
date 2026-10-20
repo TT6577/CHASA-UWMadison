@@ -1,48 +1,43 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  useLocation,
   NavLink,
 } from "react-router-dom";
-import { ChevronsDown, CalendarDays, MapPin } from "lucide-react";
-import heroImage from "../assets/heros/midautumn.jpg";
 import chasalogo from "../assets/logos/chasalogo.png";
 import thankyou from "../assets/events/thankyou.JPG";
 import Card from "../components/Card.jsx";
+import EventCard from "../components/EventCard.jsx";
+import HomeHero from "../components/HomeHero.jsx";
+import "./Home.css";
 
-// Edit announcements here - still looking into making it easier for PR/secretary chair to edit announcements
-const announcements = [
+const overviews = [
   {
     id: 0,
-    title: "CHASA Logo Design Competition",
-    date: "August 28, 2026",
-    location: "N/A - Online",
-    body: "Our logo is in need of an update. We want YOU to help us create a new one! See our post for more info!",
+    title: "General Body Meetings (GBMs)",
+    date: "Monthly",
+    location: "Campus Classrooms/MSC",
+    body: "These general events are open to everyone, for free! The events have a variety of different themes and activities.",
   },
   {
     id: 1,
-    title: "Welcome Back Fall 2026!",
-    date: "September 1, 2026",
-    location: "Mosse Humanities",
-    body: "GBM #1 is happening this Friday at 7pm. Come meet the new exec board!",
+    title: "Fam Clashes",
+    date: "Monthly",
+    location: "Campus Classrooms",
+    body: "Fam clashes are member-only events where our fams compete to win points. These are typically composed of fun competitive team-based games.",
   },
   {
     id: 2,
-    title: "Mid-Autumn Festival",
-    date: "September 15, 2026",
-    location: "Memorial Union",
-    body: "Join us for our annual Mid-Autumn Festival celebration. Food, games, and lanterns!",
+    title: "Yearly Events",
+    date: "Yearly, usually on a Chinese holiday",
+    location: "Memorial Union Great Hall or Union South Varsity Hall",
+    body: "These are THE CHASA events to go to. Midautumn Festival and Chinese New Year are our biggest events of the year, with larger scale activities, performances, food, and tablers!",
   },
   {
     id: 3,
-    title: "Lunar New Year",
-    date: "2027 TBD",
-    location: "Union South",
-    body: "Our biggest event of the year! Celebrate the Year of the Goat, complete with free Chinese cuisine and cultural performances!",
+    title: "Collabs",
+    date: "Occasionally",
+    location: "Anywhere!",
+    body: "From time to time, we work with another club (usually another cultural social club) to run an event together. It's cool to meet people from another club and another culture!",
   },
 ];
 
@@ -54,76 +49,7 @@ export default function Home() {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Hero image code */}
-      <div
-        className={"hero-image hero-content"}
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: "cover",
-          maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, black 70%, transparent 100%)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          boxSizing: "border-box",
-        }}
-      >
-        <motion.h1
-          className={"hero-text-big select-none"}
-          style={{
-            margin: "0 -5px 10px 0",
-            lineHeight: 1,
-            alignSelf: "flex-end",
-          }}
-          whileHover={{
-            rotate: [0, -3, 3, -1, 1, 0],
-            transition: { duration: 0.5 },
-          }}
-          whileTap={{
-            rotate: [0, -5, 5, -2, 2, 0],
-            transition: { duration: 0.5 },
-          }}
-        >
-          CHASA
-        </motion.h1>
-        <h2
-          className={"hero-text"}
-          style={{
-            margin: "0",
-            textAlign: "right",
-            transformOrigin: "right center",
-          }}
-        >
-          Chinese American representation <br /> @ UW-Madison
-        </h2>
-        <h2
-          className={"hero-text"}
-          style={{
-            margin: "0",
-            textAlign: "right",
-            marginTop: "30px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            gap: "6px",
-          }}
-        >
-          <span
-            className="animate-bounce"
-            style={{ display: "inline-flex", alignItems: "center" }}
-          >
-            <ChevronsDown size={25} strokeWidth={"3px"} />
-          </span>
-          Scroll down for more
-          <span
-            className="animate-bounce"
-            style={{ display: "inline-flex", alignItems: "center" }}
-          >
-            <ChevronsDown size={25} strokeWidth={"3px"} />
-          </span>
-        </h2>
-      </div>
+      <HomeHero/>
 
       <div style={{ height: "50px" }} />
 
@@ -154,35 +80,19 @@ export default function Home() {
         className="green-background-div"
         style={{ backgroundColor: "#7f8671" }}
       >
-        <h1>Announcements</h1>
+        <h1>CHASA Event Overviews</h1>
         <div className="card-grid">
-          {announcements.length > 0 ? (
-            announcements.map((a) => (
-              <Card
+          {overviews.length > 0 ? (
+            overviews.map((a) => (
+              <EventCard
                 key={a.id}
                 hoverable
                 className="borderhover"
-                style={{
-                  textAlign: "left",
-                  margin: "1rem",
-                  gap: "5px",
-                  flex: "1",
-                }}
-              >
-                <h2 style={{ color: "#743c2a" }}>{a.title}</h2>
-                <div
-                  className="flex-side"
-                  style={{ gap: "5px", alignItems: "center" }}
-                >
-                  <CalendarDays size="20px" />
-                  <p style={{ fontSize: "15px", color: "#7f8671" }}>{a.date}</p>
-                  <MapPin size="20px" />
-                  <p style={{ fontSize: "15px", color: "#7f8671" }}>
-                    {a.location}
-                  </p>
-                </div>
-                <p>{a.body}</p>
-              </Card>
+                title={a.title}
+                date={a.date}
+                location={a.location}
+                body={a.body}
+              />
             ))
           ) : (
             <p>No announcements right now — check back soon!</p>
@@ -205,9 +115,9 @@ export default function Home() {
           <NavLink className="nav-link nav-link-large" to="/events">
             Events
           </NavLink>
-          <NavLink className="nav-link nav-link-large" to="/fams">
+          {/* <NavLink className="nav-link nav-link-large" to="/fams">
             Fams
-          </NavLink>
+          </NavLink> */}
           <NavLink className="nav-link nav-link-large" to="/history">
             History
           </NavLink>
